@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "KeyPress",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "f6e9a360-c3dd-48d0-abea-9796bbec5bc8",
                     "expectedControlType": "Button",
                     "processors": "",

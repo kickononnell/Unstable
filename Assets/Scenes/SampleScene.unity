@@ -255,7 +255,7 @@ MonoBehaviour:
   - {fileID: 739243867261494734, guid: e02fc29b671f59e4688ee107b836bd04, type: 3}
   - {fileID: 5957207131962796301, guid: d16a1edd5eaf3c5498a2b79a4ec2f6e5, type: 3}
   canvas: {fileID: 1200606255}
-  spawnInterval: 3
+  spawnInterval: 2
 --- !u!1 &1200606252
 GameObject:
   m_ObjectHideFlags: 0
