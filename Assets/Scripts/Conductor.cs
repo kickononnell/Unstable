@@ -5,8 +5,11 @@ using UnityEngine;
 public class Conductor : MonoBehaviour
 {
     public GameObject[] prefabs;
+    public AudioClip[] clips;
     public Canvas canvas;
     public float spawnInterval;
+    public AudioSource audioSource;
+
     private float spawnTimer;
 
     void Start()
@@ -24,9 +27,15 @@ public class Conductor : MonoBehaviour
             {
                 spawnInterval -= 0.1f;
             }
-            GameObject spawnObject = prefabs[Random.Range(0, prefabs.Length)];
+
+            int objectId = Random.Range(0, prefabs.Length);
+
+            GameObject spawnObject = prefabs[objectId];
             RectTransform rectTransform = spawnObject.GetComponent<RectTransform>();
             Instantiate(spawnObject, new Vector2(Random.Range(rectTransform.rect.width * 1.5f, canvas.pixelRect.width - rectTransform.rect.width * 1.5f), Random.Range(rectTransform.rect.height * 1.5f, canvas.pixelRect.height - rectTransform.rect.height * 1.5f)), Quaternion.identity, canvas.transform);
+
+            audioSource.PlayOneShot(clips[objectId]);
         }
     }
+
 }
